@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="popup.js"></script>
+    <script src="notification.js"></script>
+    <script src="stats.js"></script>
+    <link rel="stylesheet" href="skin/popup.css">
+</head>
+
+<body>
+<div id="logo">
+</div>
+
+<header>
+    <!--<p>净网大师</p>-->
+</header>
+
+<img id="ring" src="skin/popup/ring.png" title="发现新通知">
+
+<div id="intro">点击关闭过滤</div>
+
+<section id="main">
+
+    <div id="block" class="menu" title="">
+        <i style="background-image: url(skin/popup/block.png)"></i>
+        <span>手动拦截</span>
+        <img src="skin/popup/arrow.png">
+    </div>
+
+    <div id="score" class="menu">
+        <i style="background-image: url(skin/popup/score.png)"></i>
+        <span>拦截成绩</span>
+        <img id="rotate" src="skin/popup/arrow.png">
+    </div>
+
+    <div id="expand">
+        <div id="score-detail">
+            <div class="count">
+                <span class="text border">此页上已拦截</span>
+                <span class="number" id="pageBlocked">0</span>
+                <span class="text">次</span>
+            </div>
+            <div class="count">
+                <span class="text border">总计拦截</span>
+                <span class="number" id="totalBlocked">0</span>
+                <span class="text">次</span>
+            </div>
+            <p class="share-title">分享至社交平台</p>
+            <div class="share">
+                <img src="skin/popup/wb.png">
+                <p>微博</p>
+            </div>
+
+            <div class="share">
+                <img src="skin/popup/qzone.png">
+                <p>QQ空间</p>
+            </div>
+
+            <div id="wx" class="share">
+                <div id="wx-hov">
+                    <section id="qr">
+                        <img src="skin/popup/qr.png">
+                        <p>微信扫码分享至好友和朋友圈</p>
+                    </section>
+                </div>
+                <p>微信</p>
+            </div>
+
+            <div id="check" class="check">
+                <i></i>
+                <span>在图标上显示拦截次数</span>
+            </div>
+        </div>
+
+        <div id="options" class="menu">
+            <i style="background-image: url(skin/popup/options.png)"></i>
+            <span>设<b></b>置</span>
+            <img src="skin/popup/arrow.png">
+        </div>
+
+        <div id="feedback" class="menu">
+            <i style="background-image: url(skin/popup/feedback.png)"></i>
+            <span>反<b></b>馈</span>
+            <img src="skin/popup/arrow.png">
+        </div>
+    </div>
+</section>
+
+<section id="clickHide" class="hide">
+    <p>请点击需要屏蔽的广告<br>（右击取消选择）</p>
+    <div id="cancel">取&nbsp;&nbsp;消</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="skin/options.css">
+    <script type="text/javascript" src="lib/polyfills/promise.js"></script>
+    <script type="text/javascript" src="lib/polyfills/fetch.js"></script>
+    <script type="text/javascript" src="ext/common.js"></script>
+    <script type="text/javascript" src="ext/content.js"></script>
+    <script src="options.js"></script>
+    <title>净网大师插件版 设置</title>
+</head>
+<body>
+<div id="bg">
+</div>
+
+
+
+<div id="main">
+    <div id="close">
+        <img src="skin/options/close.png">
+    </div>
+
+    <img id="header" src="skin/options/header.png">
+
+    <dl id="menu">
+        <dd class="active">过滤规则</dd>
+        <dd>自定义过滤</dd>
+        <dd>白名单</dd>
+        <dd>常规与帮助</dd>
+        <dd>通知</dd>
+    </dl>
+
+    <div id="setting">
+        <div id="s1" name="s1">
+            <p class="setting-title">过滤规则</p>
+
+            <p class="s1-intro">可启用需要的过滤规则或更新规则</p>
+
+            <div class="s1-update">
+                <p>过滤列表会定期自动更新</p>
+                <div id="s1-update">
+                    <img id="update-img" src="skin/options/update.png">
+                    <span>立即更新</span>
+                </div>
+            </div>
+
+            <dl class="s1-rules">
+                <dd id="easy-check">
+                    <span class="s1-select"></span>
+                    <span class="s1-enable">启用</span>
+                    <span class="s1-ruleName">EasyList China+EasyList</span>
+                    <i id="easy-updateTime" class="s1-lastUpdate">最近更新</i>
+                </dd>
+
+                <dd id="vad-check">
+                    <span class="s1-select"></span>
+                    <span class="s1-enable">启用</span>
+                    <span class="s1-ruleName">净网大师视频广告规则</span>
+                    <i id="vad-updateTime" class="s1-lastUpdate">最近更新</i>
+                </dd>
+            </dl>
+        </div>
+
+        <div id="s2" name="s2">
+            <p class="setting-title">自定义过滤</p>
+            <p class="s1-intro">您的过滤规则必须遵循
+                <a class="s2-adp" href="https://adblockplus.org/zh_CN/filters" target="_blank">过滤规则语法</a>
+            </p>
+
+            <div class="s2-edit">
+                <input id="s2-rule-add" class="s2-rule-add" type="text">
+                <div id="s2-add" class="s2-add">
+                    <img src="skin/options/plus.png">
+                    <span>添加过滤规则</span>
+                </div>
+            </div>
+
+            <div id="s2-rules" class="s2-rules">
+                <!--<p>
+                    <span class="s2-rule-text">###</span>
+                    <span class="s2-rule-del">
+                        <img src="skin/options/del2.png">
+                        删除规则
+                    </span>
+                </p>-->
+            </div>
+
+            <textarea id="s2-rules-textarea" class="hide"></textarea>
+
+            <p id="s2-edit-text">
+                <span id="s2-submit">确认更改</span>
+                <span class="text">以纯文本编辑过滤规则</span>
+            </p>
+        </div>
+
+        <div id="s3" name="s3">
+            <p class="setting-title">白名单</p>
+
+            <p class="s1-intro">净网大师将不过滤以下域名。您可以通过在网页内右击直接添加，也可以在下面输入域名（非URL），然后点击“添加过滤规则”。</p>
+
+            <div class="s2-edit">
+                <input id="newWhitelistDomain" class="s2-rule-add" type="text">
+                <div class="s2-add" id="s3-add">
+                    <img src="skin/options/plus.png">
+                    <span>添加域名</span>
+                </div>
+            </div>
+
+            <div id="s3-whiteList" class="s2-rules">
+                <!--<p>
+                    <span class="s2-rule-text">###</span>
+                    <span class="s2-rule-del">
+                        <img src="skin/options/del2.png">
+                        删除规则
+                    </span>
+                </p>-->
+            </div>
+        </div>
+
+        <div id="s4" name="s4">
+            <p class="setting-title">常规与帮助</p>
+            <p class="s4-block">常规设置:</p>
+            <p id="s4-right-check" class="s4-check">
+                <span class="s1-select"></span>
+                添加"拦截元素"到右键菜单
+            </p>
+        </div>
+
+        <div id="s5" name="s5">
+            <p class="setting-title">通知</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

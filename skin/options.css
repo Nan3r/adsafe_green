@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family: "microsoft yahei", "arial", "sans-serif";
+    cursor: default;
+    background: #f0f0f0;
+}
+
+.hide {
+    display: none;
+}
+
+#bg {
+    position: absolute;
+    -webkit-filter: blur(10px);
+    width: 700px;
+    height: 498px;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#main {
+    position: absolute;
+    background: white;
+    width: 700px;
+    height: 498px;
+    border-radius: 6px;
+    display: none;
+    overflow: hidden;
+}
+
+#header {
+    height: 48px;
+    width: 700px;
+    display: block;
+}
+
+#close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#close:hover img {
+    margin-left: -24px;
+}
+
+#menu {
+    width: 135px;
+    height: 450px;
+    border-right: 1px solid #e6e6e6;
+    float: left;
+}
+
+#setting {
+    width: 544px;
+    float: left;
+    height: 448px;
+    padding-left: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#setting > div {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dedede;
+    margin-top: 25px;
+    width: 515px;
+}
+
+#setting::-webkit-scrollbar {
+    width: 6px;
+}
+
+#setting::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#setting::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.38);
+}
+
+#menu > dd {
+    height: 70px;
+    line-height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    color: #999999;
+}
+
+#menu > dd:hover {
+    color: #0089ff;
+    background: #ecf6fe;
+}
+
+#menu > dd.active {
+    color: #0089ff;
+    background: #ecf6fe;
+    border-right: 1px solid white;
+}
+
+.s1-intro {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4c4c4c !important;
+}
+
+.setting-title {
+    margin-top: 20px;
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+}
+
+.s1-update {
+    width: 340px;
+    height: 33px;
+    font-size: 16px;
+    color: #808080;
+    line-height: 33px;
+    margin-top: 20px;
+    border: 1px solid #0089ff;
+}
+
+.s1-update > p {
+    text-indent: 16px;
+    float: left;
+}
+
+.s1-update > div {
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin-left: 16px;
+    background: #0089ff;
+    width: 132px;
+    height: 100%;
+    color: white;
+}
+
+.s1-update > div:active {
+    background: #2299ff;
+}
+
+.s1-update img {
+    vertical-align: sub;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.s1-rules {
+    margin-top: 25px;
+}
+
+.s1-rules > dd {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #4c4c4c;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.s1-rules > dd:active {
+    background: #f6f6f6;
+}
+
+.s1-rules > dd > i {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-style: normal;
+}
+
+.s1-select {
+    display: inline-block;
+    background-image: url(options/select.png);
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+    background-size: auto 100%;
+}
+
+#s4-right-check.on .s1-select {
+    background-position-x: -12px;
+}
+
+.s1-rules > dd.on > .s1-select {
+    background-position-x: -12px;
+}
+
+.s1-enable {
+    margin-left: 3px;
+}
+
+.s1-ruleName {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: underline;
+    width: 180px;
+}
+
+.s1-lastUpdate {
+    font-size: 12px;
+    color: #999999;
+}
+
+.s2-adp {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #4c4c4c;
+}
+
+.s2-edit {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.s2-rule-add {
+    float: left;
+    width: 348px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #808080;
+    padding-left: 10px;
+}
+
+.s2-add {
+    float: left;
+    width: 140px;
+    background: #0089ff;
+    color: white;
+    margin-left: 10px;
+    height: 29px;
+    font-size: 16px;
+    line-height: 27px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.s2-add img {
+    width: 14px;
+    margin-right: 5px;
+    position: relative;
+    top: 1px;
+}
+
+.s2-add:active {
+    background: #2299ff;
+}
+
+.s2-rules {
+    border: 1px solid #cdcdcd;
+    margin-top: 20px;
+    width: 510px;
+    height: 160px;
+    color: #808080;
+    font-size: 12px;
+    overflow-y: scroll;
+}
+
+.s2-rules > p {
+    height: 20px;
+    line-height: 20px;
+}
+
+.s2-rules > p.select {
+    background: #efefef;
+}
+
+#s2-edit-text {
+    margin-top: 20px;
+}
+
+#s2-edit-text.on .text {
+    display: none;
+}
+
+#s2-edit-text #s2-submit {
+    visibility: hidden;
+}
+
+#s2-edit-text.on #s2-submit {
+    visibility: visible;
+}
+
+#s2-rules-textarea {
+    font-family: "microsoft yahei", "arial", "sans-serif";
+    margin-top: 20px;
+    width: 510px;
+    height: 157px;
+    color: #808080;
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+#s2-edit-text {
+    margin-top: 10px;
+    text-align: right;
+    text-decoration: underline;
+    color: #4c4c4c;
+    cursor: pointer;
+}
+
+.s2-rule-text {
+    float: left;
+    max-width: 420px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.s2-rule-del {
+    cursor: pointer;
+    float: right;
+    padding-right: 5px;
+}
+
+.s2-rule-del img {
+    position: relative;
+    top: 1px;
+}
+
+#s2-submit {
+    display: inline-block;
+    background: #0089ff;
+    color: white;
+    width: 80px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+#s2-submit:active {
+    background: #2299ff;
+}
+
+#s4 {
+    /*height: 398px;*/
+}
+
+.s4-check {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #808080;
+    cursor: pointer;
+}
+
+.s4-block {
+    font-size: 16px;
+    color: #4c4c4c;
+    margin-top: 20px;
+}
+
+.s4-link {
+    color: #0089ff;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.s4-link a {
+    text-decoration: underline;
+    margin-right: 20px;
+    color: #0089ff;
+}
+
+.s4-qq {
+    margin-top: 10px;
+    margin-right: 85px;
+    cursor: pointer;
+    height: 28px;
+}
+
+#s5 {
+    min-height: 398px;
+    border-bottom: none !important;
+}
+
+.s5-notify {
+    margin-top: 30px;
+    line-height: 1.5;
+    font-size: 12px;
+    word-wrap: break-word;
+    border-bottom: 1px solid black;
+    border-style: dotted;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 10px;
+    border-color: #d6d6d6;
+}
+
+.s5-notify p:nth-child(1) {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.s5-notify p:nth-child(2) {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.s5-notify p:nth-child(3) {
+    font-size: 14px;
+    color: gray;
+}
+
+.updating {
+    -webkit-animation: rotate-update 3s linear forwards;
+}
+
+@-webkit-keyframes rotate-update {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(720deg);
+    }
+}

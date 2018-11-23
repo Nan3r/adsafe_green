@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Microsoft YaHei", "Arial", Sans-Serif;
+    width: 230px;
+    overflow: hidden;
+    cursor: default;
+}
+
+header {
+    height: 122px;
+    background: #009dff;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+    color: white;
+    font-size: 12px;
+}
+
+header p {
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+header.dark {
+    background: #cccccc;
+}
+
+#intro {
+    position: absolute;
+    background-image: url(popup/hover.png);
+    background-size: 100% 100%;
+    width: 96px;
+    height: 26px;
+    z-index: 999;
+    color: #4c4c4c;
+    line-height: 23px;
+    font-size: 12px;
+    text-align: center;
+    top: 95px;
+    right: 4px;
+    display: none;
+}
+
+#main {
+    width: 190px;
+    margin: 0 auto;
+}
+
+#clickHide {
+    font-size: 16px;
+    color: #4c4c4c;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 1.6;
+}
+
+#ring {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+#qr {
+    opacity: 0;
+    display: none;
+    position: absolute;
+    width: 166px;
+    height: 205px;
+    left: 20px;
+    top: 173px;
+    background-image: url(popup/qrbg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-size: 12px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#qr img {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+#qr p {
+    margin-top: 12px;
+    text-align: center;
+}
+
+#wx-hov:hover #qr {
+    display: block;
+    -webkit-animation: qr-show 0.3s ease-out forwards;
+    animation: qr-show 0.3s ease-out forwards;
+}
+
+#cancel {
+    color: #ffffff;
+    border-radius: 4px;
+    background: #b3b3b3;
+    width: 144px;
+    height: 24px;
+    margin: 20px auto 10px auto;
+    cursor: pointer;
+    line-height: 24px;
+}
+
+#cancel:hover {
+    background: #9b9b9b !important;
+}
+
+#cancel:active {
+    background: #b3b3b3 !important;
+}
+
+/*common*/
+
+.hide {
+    display: none;
+}
+
+.gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.menu {
+    font-size: 18px;
+    color: #4c4c4c;
+    cursor: pointer;
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px solid #e6e6e6;
+    vertical-align: middle;
+}
+
+.menu i {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 3px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu b {
+    display: inline-block;
+    width: 36px;
+}
+
+.menu img {
+    margin-left: 55px;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.menu img.on {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+.menu:hover {
+    color: #009dff;
+}
+
+.menu:active {
+    background: #f4f4f4;
+}
+
+.menu:hover i {
+    background-position-x: -18px;
+}
+
+/*specialized*/
+
+#logo {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 73px;
+    z-index: 100;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    background-image: url(../skin/popup/logo-white.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+    -webkit-transition: background-color 1s ease-out;
+}
+
+#logo:hover {
+    background-color: white;
+    background-image: url(../skin/popup/logo-blue.png);
+}
+
+#logo.disabled {
+    -webkit-animation: zoom-twice 1s ease-out forwards;
+    animation: zoom-twice 1s ease-out forwards;
+}
+
+#expand {
+    overflow: hidden;
+}
+
+#feedback {
+    border: none;
+}
+
+#score-detail {
+    margin-top: -263px;
+    height: 262px;
+    font-size: 12px;
+    color: #999999;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#expand.expand #score-detail {
+    margin-top: 0 !important;
+}
+
+#score-detail .count span {
+    height: 46px;
+    line-height: 46px;
+    display: inline-block;
+}
+
+#score-detail .text {
+    font-size: 14px;
+    color: #808080;
+}
+
+#score-detail .number {
+    font-size: 18px;
+    color: #009dff;
+    margin: 0 3px;
+}
+
+#score-detail .border {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.share-title {
+    font-size: 16px;
+    text-align: center;
+    color: #666666;
+    margin-top: 16px;
+    margin-bottom: 18px;
+}
+
+.share {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+.share img {
+    width: 44px;
+    display: block;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+}
+
+#wx-hov {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 10px auto;
+    cursor: pointer;
+    background-image: url(popup/wx.png);
+    background-size: 44px auto;
+}
+
+.share img:active {
+    background: #ececec;
+}
+
+.check {
+    clear: both;
+    color: #808080;
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.check.on i {
+    background-position-x: 0px;
+}
+
+.check i {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+    background-position-x: -12px;
+    background-image: url(../skin/popup/check.png);
+    background-repeat: no-repeat;
+}
+
+/*animation*/
+
+.anm-go-gray {
+    -webkit-animation: go-gray 1s linear forwards;
+    animation: go-gray 1s linear forwards;
+}
+
+.anm-go-color {
+    -webkit-animation: go-color 1s linear forwards;
+    animation: go-color 1s linear forwards;
+}
+
+@-webkit-keyframes go-gray {
+    0% {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+    100% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+
+@-webkit-keyframes go-color {
+    0% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
+
+@-webkit-keyframes zoom-twice {
+    0% {
+        -webkit-transform: scale(1, 1) rotateY(0deg);
+        transform: scale(1, 1) rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: scale(0.5, 0.5) rotateY(180deg);
+        transform: scale(0.5, 0.5) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1, 1) rotateY(360deg);
+        transform: scale(1, 1) rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes qr-show {
+    0% {
+        opacity: 0;
+        top: 173px;
+    }
+    100% {
+        opacity: 1;
+        top: 143px;
+    }
+}
+
